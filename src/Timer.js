@@ -9,10 +9,13 @@ class Timer extends Component {
 
   // add your code here
 
+  componentDidMount(){
+    this.interval = setInterval(this.clockTick, 1000)
+  }
 
-
-
-
+  componentWillUnmount(){
+    clearInterval(this.interval)
+  }
 
 
   render() {
@@ -30,13 +33,15 @@ class Timer extends Component {
     );
   }
 
+  
   //clock functions
   clockTick = () => {
     this.setState(prevState => ({
       time: prevState.time+1
     }))
   }
-
+   
+  
   stopClock = () => {
     clearInterval(this.interval)
   }
