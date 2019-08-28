@@ -42,6 +42,9 @@ class App extends Component {
     return <Timer key={id} id={id} removeTimer={this.removeTimer} />
   })
 
+  componentDidMount() {
+    this.handleAddTimer()
+  }
   // adds a random number for timer ID
   handleAddTimer = () => {
     this.setState(prevState => ({
