@@ -10,12 +10,10 @@ class App extends Component {
   }
 
 
-  //Your code here:
-
-
-
-
-
+  componentDidMount() {
+    this.handleAddTimer()
+    console.log("it mounted but not sure what this has to do with the timers")
+  }
 
 
 
@@ -23,6 +21,7 @@ class App extends Component {
   // No need to modify anything in render or the class methods below
   // Unless, of course, you're curious about how it all works
   render() {
+
 
     return (
       <div className="App">
